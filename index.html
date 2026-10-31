@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <!-- Best SEO Practices & Domain Migration Optimization -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nirdist Group PVT. LTD. | Nepal's Leading IT, Electronics &amp; Groceries Provider</title>
+    <meta name="description" content="Nirdist Group is a trustworthy Nepali brand offering high-quality electronics, IT solutions, technology innovation, and groceries. Migrated officially to company.nirdist.com.np and company.nirdist.me.">
+    <meta name="keywords" content="Nirdist Group, Nirdist Group PVT LTD, Nepal, Electronics, IT Solutions, Groceries, technology, app development, game development, trusted brand, company.nirdist.com.np, company.nirdist.me">
+    <meta name="author" content="Nirdist Group PVT. LTD.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical & Mirror Alternates for Domain Migration -->
+    <link rel="canonical" href="https://company.nirdist.com.np/">
+    <link rel="alternate" hreflang="en-np" href="https://company.nirdist.com.np/">
+    <link rel="alternate" hreflang="en" href="https://company.nirdist.me/">
+    <link rel="alternate" hreflang="x-default" href="https://company.nirdist.com.np/">
+
+    <!-- Open Graph Protocol for Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Nirdist Group PVT. LTD.">
+    <meta property="og:title" content="Nirdist Group | Nepal's Leading Provider">
+    <meta property="og:description" content="Nirdist Group is a trustworthy Nepali brand offering high-quality electronics, IT solutions, and groceries.">
+    <meta property="og:image" content="https://company.nirdist.com.np/logo.png">
+    <meta property="og:url" content="https://company.nirdist.com.np/">
+
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nirdist Group PVT. LTD. | Nepal's Trustworthy Brand">
+    <meta name="twitter:description" content="We believe in service and trust rather than profit. Explore our Electronics, IT Solutions, Technology, and Groceries.">
+    <meta name="twitter:image" content="https://company.nirdist.com.np/logo.png">
+
+    <link rel="icon" type="image/png" href="/logo.png">
+
+    <!-- Structured Data (JSON-LD) for Search Engines & Domain Migration -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Nirdist Group PVT. LTD.",
+      "alternateName": "Nirdist Group",
+      "url": "https://company.nirdist.com.np/",
+      "logo": "https://company.nirdist.com.np/logo.png",
+      "description": "Nirdist Group is a trustworthy Nepali startup offering high-quality electronics, IT solutions, technology production, and groceries.",
+      "email": "info@nirdist.com.np",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kathmandu",
+        "addressCountry": "NP"
+      },
+      "sameAs": [
+        "https://company.nirdist.com.np",
+        "https://company.nirdist.me",
+        "https://www.nirdist.com.np",
+        "https://github.com/orgs/Nirdist-Group-PVT-LTD/repositories"
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* General Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-section {
+            animation: fadeIn 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* Floating Badge Animation */
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        .animate-float {
+            animation: floatSlow 4.5s ease-in-out infinite;
+        }
+        .animate-float-delayed {
+            animation: floatSlow 5.2s ease-in-out 1.5s infinite;
+        }
+
+        /* Particle Background Styling */
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+            z-index: 1;
+        }
+
+        /* Pulse Animation for Button on Hover */
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.04); }
+        }
+        .animate-pulse-on-hover:hover {
+            animation: pulse 0.8s ease-in-out infinite;
+        }
+
+        /* Interactive Spotlight & 3D Tilt Card Effect */
+        .spotlight-card {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: transform;
+        }
+        .spotlight-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(
+                500px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+                rgba(37, 99, 235, 0.09),
+                transparent 45%
+            );
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: 2;
+        }
+        .spotlight-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Subtle Dot Pattern Overlay */
+        .bg-grid-dots {
+            background-image: radial-gradient(rgba(30, 64, 175, 0.08) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-blue-600 selection:text-white">
+
+    <!-- Subtle Official Domain Migration Notice Bar -->
+    <div id="migration-bar" class="bg-blue-950 text-blue-100 text-xs py-2 px-4 border-b border-blue-900 relative z-50">
+        <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+            <div class="flex items-center justify-center sm:justify-start gap-2 flex-wrap">
+                <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-blue-600/30 text-blue-200 border border-blue-500/40 font-semibold text-[11px]">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Official Update
+                </span>
+                <span>
+                    Our web portal has migrated to
+                    <a href="https://company.nirdist.com.np" class="font-semibold text-white underline decoration-blue-400 underline-offset-2 hover:text-blue-200">company.nirdist.com.np</a>
+                    &amp;
+                    <a href="https://company.nirdist.me" class="font-semibold text-white underline decoration-blue-400 underline-offset-2 hover:text-blue-200">company.nirdist.me</a>
+                </span>
+            </div>
+            <button onclick="document.getElementById('migration-bar').style.display='none'" class="text-blue-300 hover:text-white text-[11px] font-medium underline sm:no-underline" aria-label="Dismiss notice">
+                Dismiss ✕
+            </button>
+        </div>
+    </div>
+
+    <!-- Sticky Glassmorphism Header (Exact Original Structure & Links) -->
+    <header class="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-lg border-b border-gray-200 transition-all duration-300">
+        <div class="container mx-auto flex items-center justify-between p-4">
+            <a href="#" class="flex items-center gap-3 group" aria-label="Home page">
+                <img 
+                    src="/logo.png" 
+                    alt="Nirdist Group logo with Nepal flag" 
+                    class="h-10 w-10 rounded-full object-cover ring-2 ring-blue-600/20 group-hover:ring-blue-600 transition-all"
+                    onerror="this.onerror=null;this.src='https://placehold.co/100x100/1E40AF/FFFFFF?text=NG';"
+                >
+                <div class="flex flex-col">
+                    <span class="text-2xl font-display font-bold text-gray-800 tracking-tight leading-none">Nirdist Group</span>
+                    <span class="text-[10px] font-medium text-blue-600 tracking-widest uppercase mt-0.5">PVT. LTD. • NEPAL</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#services" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Services</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">About Us</a>
+                <a href="mailto:info@nirdist.com.np" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Contact</a>
+                <button onclick="openModal('login-modal')" class="bg-blue-600 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-blue-700 shadow-sm hover:shadow-blue-500/25 transition-all duration-300">
+                    Login
+                </button>
+            </nav>
+
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 p-2 rounded-lg hover:bg-gray-100" aria-label="Open mobile menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h4"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 p-4 space-y-2 shadow-lg">
+            <a href="#services" class="mobile-link block py-2.5 px-3 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 font-medium">Services</a>
+            <a href="#about" class="mobile-link block py-2.5 px-3 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 font-medium">About Us</a>
+            <a href="mailto:info@nirdist.com.np" class="mobile-link block py-2.5 px-3 rounded-lg text-gray-800 hover:bg-blue-50 hover:text-blue-600 font-medium">Contact</a>
+            <button onclick="openModal('login-modal')" class="w-full mt-2 bg-blue-600 text-white px-4 py-2.5 rounded-lg font-semibold hover:bg-blue-700 text-center">
+                Login
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section with Particles (Preserved Layout + Upgraded Visual Polish) -->
+        <section class="relative text-center py-20 md:py-28 px-4 bg-gradient-to-br from-blue-100 via-blue-50/70 to-white overflow-hidden">
+            <div id="particles-js"></div>
+
+            <!-- Decorative Ambient Glows -->
+            <div class="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[650px] h-[320px] bg-blue-400/15 blur-3xl rounded-full"></div>
+
+            <div class="relative z-10 container mx-auto max-w-5xl">
+                <!-- Startup Trust Pill -->
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-blue-200 shadow-xs mb-6 fade-in-section">
+                    <span class="flex h-2 w-2 rounded-full bg-blue-600 animate-ping"></span>
+                    <span class="text-xs font-semibold text-blue-900 tracking-wide uppercase">Innovating in Kathmandu, Nepal 🇳🇵</span>
+                </div>
+
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-display font-extrabold text-blue-900 mb-6 tracking-tight leading-tight fade-in-section">
+                    Nepal’s <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Trustworthy</span> Brand
+                </h1>
+
+                <p class="max-w-2xl mx-auto text-lg md:text-xl text-gray-600 mb-10 leading-relaxed fade-in-section">
+                    We believe in service and trust rather than profit. Our products include Electronics, IT solutions, and Groceries.
+                </p>
+
+                <div class="flex flex-wrap items-center justify-center gap-4 fade-in-section">
+                    <a href="mailto:info@nirdist.com.np" class="bg-blue-600 text-white px-8 py-3.5 rounded-xl font-semibold hover:bg-blue-700 shadow-lg shadow-blue-600/25 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2 animate-pulse-on-hover">
+                        <span>Connect with Us</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                    <a href="#services" class="bg-white/90 backdrop-blur-xs text-blue-900 border border-blue-200 px-7 py-3.5 rounded-xl font-semibold hover:bg-blue-50 transition-all duration-300 inline-flex items-center gap-2 shadow-xs">
+                        <span>Explore Our Offerings</span>
+                    </a>
+                </div>
+
+                <!-- Hero Showcase Frame with /logo.png & Real Photo Backdrop Fallback + Floating Badges -->
+                <div class="relative mt-14 max-w-4xl mx-auto fade-in-section">
+                    <!-- Floating Startup Badge Left -->
+                    <div class="hidden md:flex items-center gap-3 absolute -left-6 top-8 z-20 bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl border border-blue-100 animate-float">
+                        <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        </div>
+                        <div class="text-left">
+                            <p class="text-xs font-bold text-gray-900">100% Service &amp; Trust</p>
+                            <p class="text-[11px] text-gray-500">Customer-First Nepali Startup</p>
+                        </div>
+                    </div>
+
+                    <!-- Floating Startup Badge Right -->
+                    <div class="hidden md:flex items-center gap-3 absolute -right-6 bottom-8 z-20 bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl border border-blue-100 animate-float-delayed">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        </div>
+                        <div class="text-left">
+                            <p class="text-xs font-bold text-gray-900">4 Core Sectors</p>
+                            <p class="text-[11px] text-gray-500">Electronics • IT • Tech • Groceries</p>
+                        </div>
+                    </div>
+
+                    <!-- Main Hero Image Container (Uses /logo.png as requested, with a sleek real photo fallback if /logo.png isn't on the preview server) -->
+                    <div class="relative rounded-2xl p-2 bg-white/80 backdrop-blur-md border border-blue-100 shadow-2xl overflow-hidden">
+                        <img 
+                            src="/logo.png" 
+                            alt="A modern office space in Nepal representing Nirdist Group's technology services" 
+                            class="w-full max-h-[460px] object-cover rounded-xl"
+                            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=85';"
+                        >
+                        <div class="absolute bottom-4 left-4 right-4 bg-gradient-to-t from-blue-950/90 via-blue-950/60 to-transparent p-4 sm:p-6 rounded-xl text-white flex flex-col sm:flex-row items-center justify-between gap-3">
+                            <div class="flex items-center gap-3">
+                                <img src="/logo.png" alt="Nirdist Group Crest" class="w-9 h-9 rounded-full border border-white/40" onerror="this.onerror=null;this.src='https://placehold.co/80x80/2563EB/FFFFFF?text=NG';">
+                                <div class="text-left">
+                                    <p class="text-sm font-bold">Nirdist Group PVT. LTD.</p>
+                                    <p class="text-xs text-blue-200">Official Portal • company.nirdist.com.np</p>
+                                </div>
+                            </div>
+                            <a href="https://github.com/orgs/Nirdist-Group-PVT-LTD/repositories" target="_blank" rel="noopener noreferrer" class="text-xs bg-white/15 hover:bg-white/25 backdrop-blur-xs px-3.5 py-2 rounded-lg font-medium transition-colors inline-flex items-center gap-1.5">
+                                <span>View Our GitHub Projects</span>
+                                <span>↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section with Real Photos & Enhanced Hover Effects (Exact 4 Offerings) -->
+        <section id="services" class="py-20 md:py-24 px-4 scroll-mt-20 bg-grid-dots">
+            <div class="container mx-auto max-w-6xl">
+                <div class="text-center mb-14">
+                    <span class="text-xs font-bold uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">What We Do</span>
+                    <h2 class="text-4xl md:text-5xl font-display font-bold text-gray-900 mt-3">Our Offerings</h2>
+                    <p class="text-gray-600 mt-3 text-lg max-w-xl mx-auto">Innovating across sectors to meet your needs.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+                    <!-- 1. Electronics -->
+                    <a href="#services" onclick="openServiceDetail('electronics'); return false;" class="block group">
+                        <div class="spotlight-card p-6 bg-white border border-gray-200/90 rounded-2xl shadow-md group-hover:shadow-2xl group-hover:-translate-y-1.5 transition-all duration-300 fade-in-section h-full flex flex-col justify-between">
+                            <div>
+                                <div class="relative overflow-hidden rounded-xl mb-5 h-56 bg-gray-100">
+                                    <img 
+                                        src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80" 
+                                        alt="A collection of electronic devices including a smartphone and laptop" 
+                                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                                        onerror="this.onerror=null;this.src='https://placehold.co/800x600/CCCCCC/333333?text=Electronics';"
+                                    >
+                                    <span class="absolute top-3 right-3 bg-white/90 backdrop-blur-xs text-blue-800 text-xs font-bold px-3 py-1 rounded-full shadow-xs">
+                                        Gadgets &amp; Devices
+                                    </span>
+                                </div>
+                                <h3 class="text-2xl font-display font-bold text-blue-800 mb-2 group-hover:text-blue-600 transition-colors">Electronics</h3>
+                                <p class="text-gray-600 leading-relaxed">Cutting-edge mobiles, laptops, and accessories.</p>
+                            </div>
+                            <div class="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-semibold text-blue-600">
+                                <span>Click to preview offering</span>
+                                <span class="group-hover:translate-x-1 transition-transform">Explore →</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- 2. IT Solutions (Preserved GitHub Link) -->
+                    <a href="https://github.com/orgs/Nirdist-Group-PVT-LTD/repositories" target="_blank" rel="noopener noreferrer" class="block group">
+                        <div class="spotlight-card p-6 bg-white border border-gray-200/90 rounded-2xl shadow-md group-hover:shadow-2xl group-hover:-translate-y-1.5 transition-all duration-300 fade-in-section h-full flex flex-col justify-between">
+                            <div>
+                                <div class="relative overflow-hidden rounded-xl mb-5 h-56 bg-gray-100">
+                                    <img 
+                                        src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" 
+                                        alt="A person coding on a laptop, representing IT solutions" 
+                                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                                        onerror="this.onerror=null;this.src='https://placehold.co/800x600/CCCCCC/333333?text=IT+Solutions';"
+                                    >
+                                    <span class="absolute top-3 right-3 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-xs">
+                                        GitHub Open Source ↗
+                                    </span>
+                                </div>
+                                <h3 class="text-2xl font-display font-bold text-blue-800 mb-2 group-hover:text-blue-600 transition-colors">IT Solutions</h3>
+                                <p class="text-gray-600 leading-relaxed">Games, web page, and app development.</p>
+                            </div>
+                            <div class="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-semibold text-blue-600">
+                                <span>github.com/orgs/Nirdist-Group-PVT-LTD</span>
+                                <span class="group-hover:translate-x-1 transition-transform">View Repositories ↗</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- 3. Technology (Preserved GitHub Link) -->
+                    <a href="https://github.com/orgs/Nirdist-Group-PVT-LTD/repositories" target="_blank" rel="noopener noreferrer" class="block group">
+                        <div class="spotlight-card p-6 bg-white border border-gray-200/90 rounded-2xl shadow-md group-hover:shadow-2xl group-hover:-translate-y-1.5 transition-all duration-300 fade-in-section h-full flex flex-col justify-between">
+                            <div>
+                                <div class="relative overflow-hidden rounded-xl mb-5 h-56 bg-gray-100">
+                                    <img 
+                                        src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" 
+                                        alt="Industrial machinery and a person working, symbolizing technology and production" 
+                                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                                        onerror="this.onerror=null;this.src='https://placehold.co/800x600/CCCCCC/333333?text=Technology';"
+                                    >
+                                    <span class="absolute top-3 right-3 bg-white/90 backdrop-blur-xs text-blue-800 text-xs font-bold px-3 py-1 rounded-full shadow-xs">
+                                        R&amp;D Innovation
+                                    </span>
+                                </div>
+                                <h3 class="text-2xl font-display font-bold text-blue-800 mb-2 group-hover:text-blue-600 transition-colors">Technology</h3>
+                                <p class="text-gray-600 leading-relaxed">Production and innovation.</p>
+                            </div>
+                            <div class="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-semibold text-blue-600">
+                                <span>Built for Nepal's future</span>
+                                <span class="group-hover:translate-x-1 transition-transform">Explore Innovation ↗</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- 4. Groceries -->
+                    <a href="#services" onclick="openServiceDetail('groceries'); return false;" class="block group">
+                        <div class="spotlight-card p-6 bg-white border border-gray-200/90 rounded-2xl shadow-md group-hover:shadow-2xl group-hover:-translate-y-1.5 transition-all duration-300 fade-in-section h-full flex flex-col justify-between">
+                            <div>
+                                <div class="relative overflow-hidden rounded-xl mb-5 h-56 bg-gray-100">
+                                    <img 
+                                        src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80" 
+                                        alt="Fresh fruits and vegetables at a market, representing groceries" 
+                                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                                        onerror="this.onerror=null;this.src='https://placehold.co/800x600/CCCCCC/333333?text=Groceries';"
+                                    >
+                                    <span class="absolute top-3 right-3 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-xs">
+                                        Fast Delivery
+                                    </span>
+                                </div>
+                                <h3 class="text-2xl font-display font-bold text-blue-800 mb-2 group-hover:text-blue-600 transition-colors">Groceries</h3>
+                                <p class="text-gray-600 leading-relaxed">Daily essentials delivered fast to your doorstep.</p>
+                            </div>
+                            <div class="mt-5 pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-semibold text-blue-600">
+                                <span>Fresh &amp; reliable quality</span>
+                                <span class="group-hover:translate-x-1 transition-transform">Explore →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section (Preserved Original Text + Authentic Startup Value Highlights) -->
+        <section id="about" class="py-20 md:py-24 px-4 bg-blue-50/60 border-t border-blue-100 scroll-mt-20">
+            <div class="container mx-auto max-w-4xl text-center">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-blue-200 text-blue-700 text-xs font-semibold mb-4 fade-in-section">
+                    <span>Our Story &amp; Mission</span>
+                </div>
+
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-6 fade-in-section">
+                    Built on Trust, Made in Nepal 🇳🇵
+                </h2>
+
+                <p class="text-lg md:text-xl text-gray-600 mb-6 leading-relaxed fade-in-section">
+                    Nirdist Group was founded with a powerful vision: to be Nepal's most trustworthy brand for essential goods and services. We are a team of passionate professionals committed to quality, reliability, and customer satisfaction.
+                </p>
+
+                <p class="text-lg md:text-xl text-gray-600 leading-relaxed fade-in-section">
+                    Our commitment extends beyond just products; we aim to build lasting relationships with our customers and contribute positively to our community. Every transaction is a promise of quality, backed by our unwavering dedication to service.
+                </p>
+
+                <!-- 3 Authentic Startup Pillars -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 text-left fade-in-section">
+                    <div class="bg-white p-6 rounded-2xl border border-blue-100 shadow-sm">
+                        <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold mb-4">1</div>
+                        <h3 class="font-display font-bold text-gray-900 text-lg mb-1">Service Over Profit</h3>
+                        <p class="text-sm text-gray-600">We focus on building long-term trust with honest pricing and genuine products for every Nepali household.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-blue-100 shadow-sm">
+                        <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold mb-4">2</div>
+                        <h3 class="font-display font-bold text-gray-900 text-lg mb-1">Homegrown Innovation</h3>
+                        <p class="text-sm text-gray-600">From web &amp; game development to hardware innovation, we empower young talent right here in Nepal.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-blue-100 shadow-sm">
+                        <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold mb-4">3</div>
+                        <h3 class="font-display font-bold text-gray-900 text-lg mb-1">Everyday Reliability</h3>
+                        <p class="text-sm text-gray-600">Combining technology and daily essentials under one roof to make life simpler and more connected.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Exact Original 4-Column Structure + Updated Domain Info) -->
+    <footer class="bg-gray-100 border-t border-gray-200 text-gray-600">
+        <div class="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center gap-2.5 mb-4">
+                    <img src="/logo.png" alt="Nirdist Group Logo" class="h-8 w-8 rounded-full" onerror="this.onerror=null;this.src='https://placehold.co/80x80/1E40AF/FFFFFF?text=NG';">
+                    <h3 class="text-lg font-display font-bold text-gray-800">Nirdist Group</h3>
+                </div>
+                <p class="text-sm leading-relaxed">Nepal’s trusted brand built on a foundation of service and trust.</p>
+                <p class="text-xs text-gray-500 mt-3">
+                    Official domains: <a href="https://company.nirdist.com.np" class="text-blue-600 hover:underline">company.nirdist.com.np</a> &amp; <a href="https://company.nirdist.me" class="text-blue-600 hover:underline">company.nirdist.me</a>
+                </p>
+            </div>
+            <div>
+                <h3 class="text-lg font-display font-semibold text-gray-800 mb-4">Quick Links</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#about" class="hover:text-blue-600 hover:underline">About Us</a></li>
+                    <li><a href="#services" class="hover:text-blue-600 hover:underline">Services</a></li>
+                    <li><a href="mailto:info@nirdist.com.np?subject=Careers%20at%20Nirdist%20Group" class="hover:text-blue-600 hover:underline">Careers</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-display font-semibold text-gray-800 mb-4">Legal</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" onclick="openModal('privacy-modal'); return false;" class="hover:text-blue-600 hover:underline">Privacy Policy</a></li>
+                    <li><a href="#" onclick="openModal('terms-modal'); return false;" class="hover:text-blue-600 hover:underline">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-display font-semibold text-gray-800 mb-4">Contact</h3>
+                <ul class="space-y-2 text-sm">
+                    <li>Kathmandu, Nepal 🇳🇵</li>
+                    <li><a href="mailto:info@nirdist.com.np" class="text-blue-600 font-medium hover:underline">info@nirdist.com.np</a></li>
+                    <li><a href="https://github.com/orgs/Nirdist-Group-PVT-LTD/repositories" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 hover:underline">GitHub Repositories ↗</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-200 py-6 text-center text-xs text-gray-500">
+            <p>© 2025 Nirdist Group Pvt. Ltd. | All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Modal 1: Login Portal -->
+    <div id="login-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-gray-900/60 backdrop-blur-xs p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-gray-100 relative">
+            <button onclick="closeModal('login-modal')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700" aria-label="Close modal">✕</button>
+            <div class="flex items-center gap-3 mb-4">
+                <img src="/logo.png" alt="Nirdist Group" class="h-10 w-10 rounded-full" onerror="this.onerror=null;this.src='https://placehold.co/80x80/1E40AF/FFFFFF?text=NG';">
+                <div>
+                    <h3 class="font-display font-bold text-xl text-gray-900">Nirdist Group Portal</h3>
+                    <p class="text-xs text-gray-500">Team &amp; Customer Account Access</p>
+                </div>
+            </div>
+            <form onsubmit="handleLogin(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Email Address</label>
+                    <input type="email" required placeholder="you@nirdist.com.np" class="w-full px-4 py-2.5 rounded-xl border border-gray-300 text-sm focus:outline-none focus:border-blue-600">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Password</label>
+                    <input type="password" required placeholder="••••••••" class="w-full px-4 py-2.5 rounded-xl border border-gray-300 text-sm focus:outline-none focus:border-blue-600">
+                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors">
+                    Sign In
+                </button>
+                <div id="login-status" class="hidden p-3 rounded-xl bg-blue-50 text-blue-800 text-xs text-center font-medium"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Interactive Modal 2: Service Quick-Preview (Electronics & Groceries) -->
+    <div id="service-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-gray-900/60 backdrop-blur-xs p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-gray-100 relative">
+            <button onclick="closeModal('service-modal')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700" aria-label="Close modal">✕</button>
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full">Nirdist Offering</span>
+            <h3 id="service-modal-title" class="font-display font-bold text-2xl text-gray-900 mt-3">Electronics</h3>
+            <p id="service-modal-desc" class="text-gray-600 text-sm mt-2 leading-relaxed"></p>
+            <div class="mt-6 flex flex-wrap gap-3">
+                <a href="mailto:info@nirdist.com.np" class="bg-blue-600 text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-blue-700 transition-colors">
+                    Inquire via Email (info@nirdist.com.np)
+                </a>
+                <button onclick="closeModal('service-modal')" class="px-5 py-2.5 rounded-xl border border-gray-200 text-gray-700 text-sm font-medium hover:bg-gray-50">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Modal 3: Privacy & Terms -->
+    <div id="privacy-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-gray-900/60 backdrop-blur-xs p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-gray-100 relative">
+            <button onclick="closeModal('privacy-modal')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700">✕</button>
+            <h3 class="font-display font-bold text-xl text-gray-900 mb-2">Privacy Policy</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+                Nirdist Group Pvt. Ltd. respects your privacy. Any contact details shared with us at <strong>info@nirdist.com.np</strong> or across <strong>company.nirdist.com.np</strong> and <strong>company.nirdist.me</strong> are used solely to fulfill your requests and provide trustworthy service.
+            </p>
+            <button onclick="closeModal('privacy-modal')" class="mt-5 w-full bg-blue-600 text-white py-2.5 rounded-xl text-sm font-semibold">Close</button>
+        </div>
+    </div>
+
+    <div id="terms-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-gray-900/60 backdrop-blur-xs p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-gray-100 relative">
+            <button onclick="closeModal('terms-modal')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700">✕</button>
+            <h3 class="font-display font-bold text-xl text-gray-900 mb-2">Terms of Service</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+                Welcome to Nirdist Group Pvt. Ltd. By accessing our official websites (<strong>company.nirdist.com.np</strong> and <strong>company.nirdist.me</strong>), you agree to our commitment to fair, transparent, and trustworthy service across all our Electronics, IT, Technology, and Grocery offerings in Nepal.
+            </p>
+            <button onclick="closeModal('terms-modal')" class="mt-5 w-full bg-blue-600 text-white py-2.5 rounded-xl text-sm font-semibold">Close</button>
+        </div>
+    </div>
+
+    <!-- Particles.js & Interactive Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Modal Helpers
+        function openModal(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                el.classList.remove('hidden');
+                el.classList.add('flex');
+            }
+        }
+        function closeModal(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                el.classList.add('hidden');
+                el.classList.remove('flex');
+            }
+        }
+
+        function openServiceDetail(type) {
+            const titleEl = document.getElementById('service-modal-title');
+            const descEl = document.getElementById('service-modal-desc');
+            if (type === 'electronics') {
+                titleEl.textContent = 'Nirdist Electronics';
+                descEl.textContent = 'We provide genuine smartphones, laptops, and everyday tech accessories across Nepal with honest pricing and reliable customer support. Reach out to info@nirdist.com.np for product availability and orders.';
+            } else {
+                titleEl.textContent = 'Nirdist Groceries';
+                descEl.textContent = 'Fresh daily essentials, household staples, and quality groceries delivered straight to your doorstep with care and speed. Contact us at info@nirdist.com.np to learn more.';
+            }
+            openModal('service-modal');
+        }
+
+        function handleLogin(e) {
+            e.preventDefault();
+            const status = document.getElementById('login-status');
+            status.classList.remove('hidden');
+            status.textContent = 'Account portal is currently restricted to authorized Nirdist Group members. Contact info@nirdist.com.np for access.';
+        }
+
+        window.onload = function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+                document.querySelectorAll('.mobile-link').forEach(link => {
+                    link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+                });
+            }
+
+            // Interactive Spotlight Effect on Service Cards
+            document.querySelectorAll('.spotlight-card').forEach(card => {
+                card.addEventListener('mousemove', e => {
+                    const rect = card.getBoundingClientRect();
+                    card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+                    card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+                });
+            });
+
+            // Intersection Observer for fade-in animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in-section');
+                        entry.target.style.opacity = 1;
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-section').forEach(el => {
+                el.style.opacity = 0;
+                observer.observe(el);
+            });
+
+            // Particles.js configuration (Preserved from Original)
+            if (typeof particlesJS !== 'undefined') {
+                particlesJS('particles-js', {
+                    "particles": {
+                        "number": {
+                            "value": 80,
+                            "density": {
+                                "enable": true,
+                                "value_area": 800
+                            }
+                        },
+                        "color": { "value": ["#1E40AF", "#FFFFFF", "#60A5FA"] },
+                        "shape": {
+                            "type": "circle",
+                            "stroke": { "width": 0, "color": "#000000" },
+                            "polygon": { "nb_sides": 5 }
+                        },
+                        "opacity": {
+                            "value": 0.5,
+                            "random": false,
+                            "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false }
+                        },
+                        "size": {
+                            "value": 5,
+                            "random": true,
+                            "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false }
+                        },
+                        "line_linked": {
+                            "enable": true,
+                            "distance": 150,
+                            "color": "#60A5FA",
+                            "opacity": 0.4,
+                            "width": 1
+                        },
+                        "move": {
+                            "enable": true,
+                            "speed": 3,
+                            "direction": "none",
+                            "random": false,
+                            "straight": false,
+                            "out_mode": "out",
+                            "bounce": false,
+                            "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 }
+                        }
+                    },
+                    "interactivity": {
+                        "detect_on": "canvas",
+                        "events": {
+                            "onhover": {
+                                "enable": true,
+                                "mode": "repulse"
+                            },
+                            "onclick": {
+                                "enable": true,
+                                "mode": "push"
+                            },
+                            "resize": true
+                        },
+                        "modes": {
+                            "grab": { "distance": 400, "line_linked": { "opacity": 1 } },
+                            "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 },
+                            "repulse": { "distance": 200, "duration": 0.4 },
+                            "push": { "particles_nb": 4 },
+                            "remove": { "particles_nb": 2 }
+                        }
+                    },
+                    "retina_detect": true
+                });
+            }
+        };
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1849334684588909" crossorigin="anonymous"></script>
+</body>
+</html>
